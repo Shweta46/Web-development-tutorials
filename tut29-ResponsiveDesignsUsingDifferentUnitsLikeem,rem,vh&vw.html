@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design by setting units like em, rem, vh & vw</title>
+
+
+    <!-- SITES can be made RESPONSIVE by
+    1. setting up viewport
+    2. use max-width and max-height
+    3. using css media queries
+    4. using rem/ h/ vw units not px -->
+
+    <style>
+        html{
+            font-size: 25px;
+        }
+        .container{
+            border: 2px solid red;
+            font-size: 10px;
+            /* height: 300px; */
+
+            /* when written like this, 100vh means the height of the element covers the whole page, vh= view height. vh is used widely more as width is also set by setting up the percentage */
+            height: 100vh;
+            /* width: 400px; */
+            
+            /* vw is set for width length */
+            width: 100vw;
+        }
+
+        #first { 
+
+            /* it becomes 10 times of the font size of its parent container which in this case in container class whose font size is 10px so it becomes 10 times its size, thats what em unit is about */
+            /* font-size: 10em; */
+
+            /* font-size: 3em; */
+
+            /* this padding will be 3 times the font size of #first id of fir */
+
+            /* should be used when you want the child to inherit parent's trait */
+            /* padding: 3em; */
+            
+        }
+
+        h1{
+            text-align: center;
+        }
+        
+        #second{
+            /* rem adjusts the font size according to the multiple of the font size with the html element font size mentioned above that is root element */
+            
+            /* rem should be used when you want to set the whole page's font size relatively and sized according to the base element that is the whole page's font should vary together relatively*/
+            /* font-size: 4rem; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="first">This is First heading</h1>
+        <h1 id="second">This is Second heading</h1>
+        <h1 id="third">This is Third heading</h1>
+    </div>
+</body>
+
+</html>

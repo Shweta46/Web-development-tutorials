@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+    <title>Before and After Pseudo Selectors</title>
+   
+   <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(2, 0, 0);
+            color: rgb(255, 255, 255);   
+        }
+
+        body::before{
+            content: '';
+            background-image: linear-gradient(45deg, rgba(19, 1, 1, 0), rgb(184, 32, 32));
+            z-index: -2;
+            opacity: 0.3;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+/* to decrease the opacity of the background image  */
+        header::before{
+
+            /* this one is fucking important, dont forget this comment */
+            content: "";
+           
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+
+            /* this comment is very necessary */
+            position: absolute;
+
+            /* when we set the position to absolute, there was space created in the top and somewhere else. to remove that we style it like the below given code */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+
+            /* will position the element to the very back of the page and the written content will be visible, nice! */
+            z-index: -1;
+
+        }
+        .navigation{
+            font-family: 'Otomanopee One', sans-serif;
+            font-size: 18px;
+            display: flex;
+        }
+
+        /* list style none removed the bullet points appearing in the list items*/
+        li{ 
+            list-style: none;
+            padding: 20px 20px;
+        }
+
+        section{
+            height: 300px;
+            /* border: 2px solid red ; */
+            display: flex;
+            flex-direction: column;
+            margin: 3px 230px;
+            align-items: center;
+
+        /* justify content centers the items in y direction */
+            justify-content: center;
+        }
+        
+        
+        h3{
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+        }
+
+        p{
+            text-align: center;
+        }
+        /* section::before{
+            content: "This is a content";           
+        } */
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h3>Welcome to Coding World!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cumque officiis provident animi quaerat velit unde, nisi et minima tenetur, temporibus, sint nostrum porro rem facere neque earum pariatur soluta molestias enim consectetur? Sit! Lorem, ipsum.
+            </p>
+        </section>
+        <hr>
+    
+    
+</body>
+</html>

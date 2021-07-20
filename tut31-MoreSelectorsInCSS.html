@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More selectors in CSS</title>
+    <style>
+        h1 {
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* div ke under jitne bhi p hai sirf unmein laagu hoga ye */
+        div p {
+            color: rgb(46, 66, 4);
+            background-color: violet;
+            font-weight: bold;
+        }
+
+        /* will affect only the p inside the li which is inside div */
+        div li p {
+            color: teal;
+        }
+
+        /* this property will be affecting only the p whose direct parent is a div element, no one else */
+        div>p {
+            color: rgb(206, 8, 147);
+            background-color: rgb(130, 222, 238);
+            font-weight: bold;
+        }
+
+        /* paragraph whose previous sibling is a div element will be affected by this comment */
+        div+p{
+            color: rgb(29, 68, 6);
+            background-color: rgb(238, 130, 144);
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>This is more on selectors.</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>this paragraph is inside li</p>
+                </li>
+                <li>This will not get affected with the div li p{ <br> } wala comment</li>
+            </ul>
+
+
+            <p>Thi is a paragraph.</p>
+        </div>
+        <p>This is another paragraph.</p>
+    </div>
+    <p>This is outermost paragraph.</p>
+</body>
+
+</html>

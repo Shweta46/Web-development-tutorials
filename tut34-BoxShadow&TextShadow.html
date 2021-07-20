@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            padding: 23px 12px;
+            border: 2px solid red;
+            margin: 12px 23px;
+            background-color: rgb(232, 247, 250);
+
+            /* the third component is the box shadow which controls the saturation of the shadow. if its more than the shadow saturates over more area and if less then over lesser area and becomes more crisp */
+
+            /* rgba() the fourth element is apha which controls the darkness of the color chosen */
+
+            /*box-shadow: 10px 10px 15px 13px rgba(71, 144, 88, 0.6); */
+            /*syntax  x-offset y-offset blur-radius spread-radius color */
+
+            box-shadow: inset 3px 5px green;
+
+            /* to set multiple box shadow for the same element */
+            box-shadow: 30px 5px green, 0px 20px red;
+        }
+
+        .card h2{
+
+            /* this is more styling the text inside */
+            /* text-shadow: 4px 0px #e80fab77; */
+
+            /* third component is blur-radius */
+            text-shadow: 4px 0px 2px #e80fab77;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>This is C++ Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum ad magni reiciendis, soluta
+                blanditiis minus odio fugiat est quasi aliquam sequi! Ex neque id veniam. Earum cupiditate expedita,
+                provident vel at quasi laborum? Culpa et architecto dolorem quia ipsum.</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>This is HTML course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum ad magni reiciendis, soluta
+                blanditiis minus odio fugiat est quasi aliquam sequi! Ex neque id veniam. Earum cupiditate expedita,
+                provident vel at quasi laborum? Culpa et architecto dolorem quia ipsum.</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum ad magni reiciendis, soluta
+                blanditiis minus odio fugiat est quasi aliquam sequi! Ex neque id veniam. Earum cupiditate expedita,
+                provident vel at quasi laborum? Culpa et architecto dolorem quia ipsum.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

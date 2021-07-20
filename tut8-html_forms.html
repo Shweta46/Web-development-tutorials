@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h2>This is form tutorial</h2>
+    <!-- action tells the location of the final submission of the data in the form -->
+    <form action="backend.php">
+        <!-- label is associated with the input tag through id attribute in input and for attribute in label. they should have common name   -->
+
+        <label for="name"> Name</label>
+
+        <!-- div text divdes the text into separate section, and then when you have style the whole div, assign a class and then you can style the elements individually and as a grp -->
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role: <input type="text" name="myROle">
+        </div>
+        <br>
+        <div>
+            <!--name is used by the backend to identify elements and values in that tag  -->
+            Email: <input type="email" name="myEmail">
+        </div>
+        <br>
+
+        <div>
+            Date: <input type="date" name="Date">
+        </div><br>
+        <div>
+            Number: <input type="number" name="myBonus">
+        </div><br>
+        <div>
+            <label for="checkit">Are you eligible:</label>
+            <div>
+                 <input type="checkbox" name="myEligibility" id="checkit">
+            </div>
+        </div><br>
+        <div>
+            <label for="car">Car</label>
+            <!-- the select option lets user select from the drop down options provided by you  -->
+            <select name="myCar" id="car">
+                <option value="Ind">Indica</option>
+                <option value="swf" selected>Swift</option>
+            </select>
+        </div><br>
+        <div>
+            <!-- name same then the user can only select one of those options  -->
+            Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender"> Other <input
+                type="radio" name="myGender">
+        </div><br>
+        <div>
+            <!-- textarea is used for inserting large text inputs -->
+            Write about yourself <br> <textarea name="myText" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit Apply">
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="Reset Now">
+        </div>
+        <br>
+    </form>
+</body>
+
+</html>

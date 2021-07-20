@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment, Float and CLear</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .container {
+
+            width: 900px;
+            border: 3px solid purple;
+            /* in x direction margin auto keeps the item in center */
+            margin: auto;
+            background: rgb(199, 89, 111);
+
+
+        }
+        h1{
+            /* 23px is the margin for y axis and auto for x axis */
+            margin: 23px auto;
+            /* the margin auto wont work as h1 doesnt have a specified width */
+            width: 400px;
+            /* the more pixels you will add, the more the text moves left of the center dont know why that is but it is like that */
+        }
+
+        .item {
+            border: 3px solid grey;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background: rgb(240, 233, 233);
+
+
+        }
+        #fruit{
+            /* the parent collapses with the float property and the child floats in the whole page not inside the parent */
+            float: left;
+            width: 48%;
+
+        }
+        #computer{
+            
+            float: right;
+            width: 48%;
+
+        }
+         #stationary{
+            /* float: left; */
+            
+            /* clear left means whatever float is left, it shouldnt disturb this element and clear its left side, no float left or right element is allowed on that side */
+            /* clear: left; */
+            clear: both;
+            width: 100%;
+        }
+        p,h3{
+            text-align: right;
+            text-align: left;
+            text-align: center;
+            /* justify is center for the entire content like in wordpad */
+            text-align: justify;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Welcome to my store!</h1>
+        <div id="fruit" class="item">
+            <h3>Fruits</h3>
+            <p id="fruitpara" class="para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos in nam adipisci, facere inventore
+                excepturi reprehenderit consequatur? Eligendi numquam in illo dolor veritatis quibusdam eos dolore
+                itaque eveniet. Totam, quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur dolore eum, quidem mollitia eveniet totam. Voluptas deleniti doloribus beatae? Rerum sint amet architecto facilis odit provident voluptas sit error, minus magni voluptatem perspiciatis perferendis.
+            </p>
+        </div>
+        <div id="computer" class="item">
+            <h3>Computer</h3>
+            <p id="computerpara" class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, impedit! Voluptatibus, modi amet explicabo assumenda debitis voluptate. Architecto perspiciatis in, nulla quam corrupti unde quia! Distinctio soluta officia tenetur explicabo laborum veniam error atque! Voluptatem!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos in nam adipisci, facere inventore
+                excepturi reprehenderit consequatur? Eligendi numquam in illo dolor veritatis quibusdam eos dolore Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos rerum voluptatem fugit commodi non temporibus modi. Esse eaque, totam voluptatem et illum fuga eum recusandae laudantium sit, obcaecati, magni optio expedita maiores id molestiae?
+                itaque eveniet. Totam, quis.
+            </p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationarypara" class="para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos in nam adipisci, facere inventore
+                excepturi reprehenderit consequatur? Eligendi numquam in illo dolor veritatis quibusdam eos dolore
+                itaque eveniet. Totam, quis.
+            </p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationarypara" class="para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos in nam adipisci, facere inventore
+                excepturi reprehenderit consequatur? Eligendi numquam in illo dolor veritatis quibusdam eos dolore
+                itaque eveniet. Totam, quis.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

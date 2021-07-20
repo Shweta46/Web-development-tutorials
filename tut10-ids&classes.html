@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ids and Classes in HTML</title>
+</head>
+
+<body>
+    <h3>Ids and classes tutorial</h3>
+    <!-- ids should be different for different elements -->
+    <div id="mainbox" class="redBg">
+        this is mainbox
+    </div>
+    <!-- Emmet -->
+
+    <!--span.redBg > class is already assigned to the element  -->
+    <span class="redBg"></span>
+
+    <!-- span#mainSpan > assigns id to the element -->
+    <span id="mainSpan"></span>
+
+    <!-- for multiple classes together > div.class1.class2 -->
+    <div class="redBg blackorder anotherclass"></div>
+
+    <!-- if we write > .black > Emmet provides this class default to div element-->
+    <div class="black"></div>
+    <!-- creating multiple elements using Emmet > span.class*2 > produces 2 copies of the same element with same class-->
+
+    <span class="myclass myClass2 myClass3">first</span>
+    <span class="myclass myClass2 myClass3">second</span>
+    <span class="myclass myClass2 myClass3">third</span>
+    <span class="myclass myClass2 myClass3">fourth</span>
+</body>
+
+</html>

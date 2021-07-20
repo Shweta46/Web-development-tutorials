@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid- Spanning Multiple Rows and Columns</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 3fr 3fr;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            
+
+            /* to specify grid gaps in rows and columns individually */
+            grid-row-gap: 1rem;
+            grid-column-gap: 2rem;
+
+            grid-gap: 1rem;
+    
+        }
+
+        .box{
+            border: 2px solid red;
+            background-color: violet;
+            padding: 23px;
+
+        }
+
+        /* decides how the first child of the parent box should be like. the below code means that it should from first column and end before the third */
+        .box:first-child{
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            /* the same happens here, the box will start at first and end before third */
+            grid-row-start: 1;
+            grid-row-end: 3;
+            
+            /*shorthand for spanning. this means that it will start from column and span to the number of columns mentioned 
+            syntax: starting from column/ span to number of columns */
+            grid-column: 3/ span 3;
+            grid-row: 2/ span 4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item1</div>
+        <div class="box">Item2</div>
+        <div class="box">Item3</div>
+        <div class="box">Item4</div>
+        <div class="box">Item5</div>
+        <div class="box">Item6</div>
+        <div class="box">Item7</div>
+        <div class="box">Item8</div>
+        <div class="box">Item9</div>
+        <div class="box">Item10</div>
+        <div class="box">Item1</div>
+        <div class="box">Item2</div>
+        <div class="box">Item3</div>
+        <div class="box">Item4</div>
+        <div class="box">Item5</div>
+        <div class="box">Item6</div>
+        <div class="box">Item7</div>
+        <div class="box">Item8</div>
+        <div class="box">Item9</div>
+        <div class="box">Item10</div>
+    </div>
+</body>
+</html>

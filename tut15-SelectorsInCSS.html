@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        p {
+            border: 2px solid grey;
+            color: red;
+        }
+
+        /* css comment mentioned like this */
+        /* id selector, used when we want to change a particular element only */
+        #redElement {
+            color: yellowgreen;
+        }
+
+        /* class selector, can be applied in multiple elements */
+        .bgblue {
+            color: yellow;
+            background-color: blue;
+        }
+
+        /* Grouing selectors */
+        footer,
+        span {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>CSS Selectors</h3>
+
+    <p>This is a simple pargraph to demonstrate css selectors.</p>
+
+    <p id="secondPara" class="redElement bgblue">
+        <!-- redElement is mentioned as an id in css and hence mentioning it here as a class wont have any affect on the element -->
+        This is a another simple pargraph to demonstrate css selectors.
+    </p>
+    <div>
+        <!-- this paragraph under div will also be red as the style sheet command given above specifies that ALL paragraphs should be red -->
+        <p>This is a yet simple pargraph to demonstrate css selectors.</p>
+    </div>
+    <p id="redElement">This is a also simple pargraph to demonstrate css selectors.</p>
+    <span>This is span. </span>
+    <footer>This is footer.</footer>
+</body>
+
+</html>

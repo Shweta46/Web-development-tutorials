@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model, Margin and Padding</title>
+    <style>
+        /* this is universal stylist and the change is in all the elements unless you mention it under to override the elements before */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        
+        }
+body{
+    background-color: aqua;
+}
+        .container {
+            background-color: rgb(161 255 210);
+            border: 5px double #1f798b;
+            border-radius: 23px;
+            /* padding shorthand */
+            padding: 34px 56px;
+            /* when you want to set the top bottom and right left padding same: syntax is padding: y(top/bottom) x(left/right); */
+
+            /* padding: 19px 56px 20px 78px; */
+            /*padding-top: 79px;
+            padding-bottom: 34px; */
+            margin: 34px 14px;
+            width: 1000px;
+            /* the width and height of the box comprise of margin and padding as well, so when you change these the width/height changes too. So to avoid changing these properties and stick to the width and height of the box as you provided, you use box-sizing property */
+            box-sizing: border-box;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="first">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio iste perspiciatis iure
+            doloremque sapiente fugiat expedita voluptate nobis et esse corporis dolores officiis fuga ducimus quae,
+            tenetur officia quo sit non iusto adipisci?</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="second">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio iste perspiciatis iure
+            doloremque sapiente fugiat expedita voluptate nobis et esse corporis dolores officiis fuga ducimus quae,
+            tenetur officia quo sit non iusto adipisci?</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="third">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi distinctio iste perspiciatis iure
+            doloremque sapiente fugiat expedita voluptate nobis et esse corporis dolores officiis fuga ducimus quae,
+            tenetur officia quo sit non iusto adipisci?</p>
+    </div>
+</body>
+
+</html>

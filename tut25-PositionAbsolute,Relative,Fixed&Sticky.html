@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning in CSS</title>
+    <style>
+        /* CSS position: static (:default), absolute, relative, fixed, sticky */
+
+        .container{
+            border: 2px solid blue;
+            background-color: khaki;
+            height: 34444px;
+        }
+
+        .box {
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+            display: inline-block;
+        }
+
+        #box3 {
+            /* it fixes itself relative to its normal position*/
+            /* position: relative; */
+            
+            /* top: 34px;
+            left: 14px; */
+            
+            /* the above 2 steps when used with relative generates a gap in the position of the element3 hence we use relative property when we want to generate a gap or space in place of the element */
+
+            /* position: absolute; */
+            /* it adjusts itself wrt the parent element and sets its top and left position with respect to the parent element*/
+
+            /* position: fixed; */
+            /*position of the element is relative to its browser window. if we want the box to stay at its place and not move from there even if we scroll */
+            
+            /* right: 4px;
+            bottom: 2px; */
+            
+            /* the above two features take the box3 to the bottom right corner of the screen, can be used in making chat boxes */
+
+            position: sticky;
+            top: 3px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">Chat with us</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+
+</html>

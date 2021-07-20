@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Index</title>
+    <style>
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+
+        #box1 {
+            background-color: green;
+            position: relative;
+            top: 49px;
+            z-index: 20;           
+        }
+
+        #box2 {
+            background-color: blue;
+            
+            /* visibility hidden reserves the space for the element and makes it invisible */
+            /* visibility: hidden; */
+
+            /* display none doesnt reserve the place for the element and also makes it invisible */
+            /* display: none; */
+
+            /* z index works for position defined elements only otherwise doesnt work, also doesnt work for static position elements. 
+            
+            the element with highest z index comes forward than the rest of the elements, if negative then its bound to be in the very back */
+            position: relative;
+            top: 14px;
+            z-index: 15;
+        }
+
+        #box3 {
+            background-color: red;
+            visibility:
+        }
+
+        #box4 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+
+</html>

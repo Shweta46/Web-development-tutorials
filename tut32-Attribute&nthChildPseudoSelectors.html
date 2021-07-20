@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes & nth child Pseudo Selectors</title>
+    <style>
+        .container{
+            width: 233px;
+            margin: auto;
+            display: block; 
+        }
+
+        input{
+            display: block;
+        }
+
+        /* property will be only applied to the input element with type=text. it is a pseudo selector that targets a particular attribute in the tag */
+        input[type='text']{
+            padding: 23px;
+            border: 2px solid red;
+        }
+
+        /* this style will be applicable to the anchor tag whose target is set. same as above i.e., a pseudo selector */
+        /* would work for both self and blank targets */
+        a[target]{
+            font-size: 44px;
+            color: violet;
+        }
+
+        /* this style selector would be for more specific targetting of the element */
+
+        a[target='_self']{
+            font-size: 44px;
+            color: rgb(132, 130, 238);
+        }
+
+        input[type='email']{
+            color: teal;
+            border: 4px solid lime;
+
+        } 
+
+        /* this will be applicable only to the third element of the li tag */
+        li:nth-child(3){
+            color: rgb(138, 92, 172);
+            background-color: khaki;
+        }
+
+        /* this woould be applicable to every 2nd component of the list*/
+        li:nth-child(2n+0){
+            color: red;
+        }
+
+        li:nth-child(3n+3){
+            color: rgb(0, 89, 255);
+        }
+
+        /* code simply for odd list items */
+        li:nth-child(odd){
+            background-color: yellow;
+        }
+
+         /* code for even list items */
+        li:nth-child(even){
+            background-color: rgb(202, 202, 166);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- its called target specific pseudo selectors. _blank takes you to a different tab when you click on the link in the page -->
+        <h1><a href="https//google.com" target="_blank">Go to google.</a></h1>
+
+        <!-- self takes you to the same page when clicking on the link -->
+        <h1><a href="https//wikipedia.com" target="_self">Go to wikipedia.</a></h1>
+        <form action="" class="formcontrol">
+            <input type="text" placeholder="Enter your Name">
+            <input type="password" placeholder="Enter your Password">
+            <input type="email" placeholder="Enter your Email Address">
+            <input type="submit" value="Submit">
+        </form>
+
+        <ul>
+            <li class="item" id="item-1">Item1</li>
+            <li class="item" id="item-2">item2</li>
+            <li class="item" id="item-3">Item3</li>
+            <li class="item" id="item-4">Item4</li>
+            <li class="item" id="item-5">Item5</li>
+            <li class="item" id="item-6">Item6</li>
+            <li class="item" id="item-7">item7</li>
+            <li class="item" id="item-8">Item8</li>
+            <li class="item" id="item-9">Item9</li>
+            <li class="item" id="item-10">Item10</li>
+        </ul>
+    </div>
+</body>
+</html>

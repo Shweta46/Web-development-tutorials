@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header {
+            /* margin didnt center the elements in header */
+
+            /* margin: auto; */
+            border: 2px solid red;
+            /* width: 200px; */
+
+            /* width: 15%; */
+            /* or width: 15%; will also work, this means it covers the 15% part of the total head space */
+
+            /* after our elements are centered, we can remove margin and width property of header and the elements inside it will be centered anyway, but its best to leave them as such to avoid fucking your code up*/
+            width: 1200px;
+            margin: auto;
+
+        }
+
+        img {
+            /* img has default display inline, to center that elements within the header we have to make its display block so that it covers the whole page */
+            display: block;
+            margin: auto;
+            width: 34px;
+        }
+
+        h3 {
+            /* when we are expanding the display of the device, the header element is going off the center, to fix that we have to use text align property */
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+        }
+
+        .box {
+            border: 4px solid black;
+            background: grey;
+            margin:4px 0px;
+            padding: 23px;
+
+         /*if display is set to inline, the whole structure inside container element collapses as there are block elements present inside it. if only block, then they cover the whole space beside them as well and no elements is placed adjacent to it. to cure this problem we have inline-block property which lets you have the block elements together  */
+            display: inline-block;
+            width: 33%;
+
+            /* we set inline-block property to the elements we want to align together not its container, so if we have multiple elements and we want them one after other without interferring with each other then we use inline-block */
+
+            /* the element's combined width is what you assigned including margin and padding */
+            box-sizing: border-box;
+        }
+
+        .container{
+            
+            width: 1200px;
+            margin: auto;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <img src="https://www.codewithharry.com/assets/img/logo.png" alt="">
+        <h3>Welcome to my Blog!</h3>
+
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, illo mollitia? Itaque delectus blanditiis
+                modi soluta cum aperiam debitis explicabo impedit expedita, voluptate quibusdam. Rem similique qui animi
+                facilis tempora dolorem eveniet velit maxime, cum, laborum tenetur modi placeat! In commodi consequatur
+                consequuntur a?
+            </p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, illo mollitia? Itaque delectus blanditiis
+                modi soluta cum aperiam debitis explicabo impedit expedita, voluptate quibusdam. Rem similique qui animi
+                facilis tempora dolorem eveniet velit maxime, cum, laborum tenetur modi placeat! In commodi consequatur
+                consequuntur a?
+            </p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, illo mollitia? Itaque delectus blanditiis
+                modi soluta cum aperiam debitis explicabo impedit expedita, voluptate quibusdam. Rem similique qui animi
+                facilis tempora dolorem eveniet velit maxime, cum, laborum tenetur modi placeat! In commodi consequatur
+                consequuntur a?
+            </p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

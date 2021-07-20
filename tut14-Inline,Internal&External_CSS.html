@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    
+    <!-- to link css style sheet to an html file, type link and then enter -->
+
+    <!-- the element in css style sheet written afterwards overrides the previous ones -->
+    <link rel="stylesheet" href="tut14-Inline,internal&External_CSS.css">
+    
+    <style>
+        .la{
+            color: orangered;
+       /* important overrides every css stylesheet code */
+       
+            background-color: slateblue !important;
+        }
+       
+    </style>
+       
+</head>
+<body>
+    <h3>This is CSS Tutorial</h3>
+    
+<!-- inline css makes the code messy, dont use it -->
+<!-- inline css overwrites Internal css -->
+    <p style="color: red; background-color: rgb(0, 247, 255);">this tutorial will teach you about html/ css. </p>
+
+    <div class="la">This is for Internal css</div>
+
+</body>
+</html>

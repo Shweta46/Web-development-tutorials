@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid- Using Media Queries In CSS Grid</title>
+    <style>
+
+        .container{
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            }
+
+            /* including this later saved the content inside the box from overflowing */
+            .container{
+                    grid-gap: 2rem;
+                    grid-template-areas: 
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+                }
+            span{
+                    display: block;
+                    text-align: center;
+                }
+                aside{
+                    display: none;
+                }
+        }
+
+        @media only screen and (min-width: 300px) and (max-width:500px) {
+                body {
+                    background-color: blue;
+                }
+                .container{
+                    grid-gap: 2rem;
+                    grid-template-areas: 
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+                }
+                aside{
+                    display: none;
+                }
+                span{
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+        @media (min-width: 500px) and (max-width:800px) {
+                body {
+                    background-color: yellow;
+                }
+
+                .container{
+                    grid-gap: 2rem;
+                    grid-template-areas: 
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+                }
+                span{
+                    display: block;
+                    text-align: center;
+                }
+             }
+
+        @media (min-width: 800px) {
+                body {
+                    background-color: green;
+                    }
+                }
+
+        .bdr{
+            border: 2px solid black;
+            padding: 3px 23px;
+            background-color: wheat;
+        }
+
+        nav{
+            grid-area: navbar;
+            padding: 12px;
+        }
+        section{
+            grid-area: section;
+        }
+        aside{
+            grid-area: aside;
+        }
+
+        footer{
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Servies</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bdr">
+            <h2>Leran CSS in Hindi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores quia quo corrupti repellendus optio rem, iure maiores qui alias molestias delectus culpa veniam, excepturi ullam beatae saepe numquam fugit vitae. Reprehenderit impedit, ab sit laborum unde asperiores distinctio, suscipit dolorem dolore illum voluptatum quia? Sunt eaque perspiciatis architecto consequuntur deleniti, amet impedit quae excepturi velit. Corrupti, facere hic perferendis maiores nisi quos perspiciatis labore cum laudantium facilis nulla sit consequuntur unde alias similique ducimus placeat veniam nostrum. Illo ea sed quo at maiores numquam inventore consectetur qui, voluptatem quos asperiores, delectus fugit vero! Sint nihil laborum enim debitis sed optio deserunt possimus ea mollitia eveniet magnam officiis, suscipit obcaecati velit molestias, facere tempore consequuntur iusto. Cupiditate, nihil dignissimos! Doloremque ratione tenetur laboriosam, autem eligendi soluta, similique quo eaque culpa corrupti amet, voluptatem dolorum?</p>
+        </section>
+        <aside class="bdr">
+            <h1>More About Us</h1>
+        </aside>
+    </div>
+    <footer class="bdr">Copyright CodeWithShweta 2021</footer>
+
+</body>
+
+</html>

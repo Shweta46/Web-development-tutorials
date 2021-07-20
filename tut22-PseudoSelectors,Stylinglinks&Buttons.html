@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors and more designing</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            background-color: rgb(236, 170, 146);
+            margin: 34px;
+            padding: 34px;
+            width: 666px;
+            margin: auto;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: rgb(180, 25, 25);
+            background-color: green;
+            
+        }
+        /* nice property, if you have visited the link then some identifier can be used */
+        
+        a:visited{
+            color: greenyellow;
+        }
+        /* active activates when you click on the link or text to the link */
+        a:active{
+            background-color: darkblue;
+        }
+
+        .btn{
+            font-family: cursive;
+            /* makes the font bolder */
+            font-weight: 100;
+            background: rgb(218, 124, 143);
+            padding: 6px;
+            /* border: transparent; or */
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+        .btn:hover{
+            color: darkgoldenrod;
+            background-color: white;
+            border: 2px solid black;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus ratione aperiam esse ut inventore, impedit totam, error architecto deleniti ipsa doloremque rerum fugiat illo ad, adipisci exercitationem placeat mollitia doloribus. Dolore sed similique dignissimos.</p>
+        <a href="https://google.com" class="btn">Read more</a>
+        <button class="btn">Contact Us</button>
+    </div>
+</body>
+</html>

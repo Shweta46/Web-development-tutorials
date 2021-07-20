@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranform Property In CSS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container{
+            background: khaki;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            width: 100vw;
+        }
+
+        .box{
+            background: rgb(136, 206, 154);
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 400px;
+            width: 400px;
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s ease-in-out .3s;
+        }
+
+        .box:hover{
+            transform: rotate(45deg);
+            transform: scale(1.2);
+            font-size: 40px;
+
+            /* coordinate of x and y direction which you want to take it to */
+            transform: translate(150px, 80px);
+            /* transform: translateX(50%); */
+            /* transform: translateY(100px); */
+            /* transform: skewX(-10deg); */
+            box-shadow: 10px 10px 13px green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>This is a box.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
